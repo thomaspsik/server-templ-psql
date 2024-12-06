@@ -4,7 +4,6 @@ module.exports = {
     node: true,
   },
   extends: ['airbnb-base'],
-  plugins: ['vitest'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',

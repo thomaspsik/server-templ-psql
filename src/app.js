@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import path from 'path';
 import cors from 'cors';
 import debug from 'debug';
-import { errorHandler, notFound } from './middleware/errorHandler.js';
 
 import testRoute from './api/routes/testRoutes.js';
 
@@ -24,10 +23,6 @@ app.use(express.json());
 
 app.use('/test', testRoute);
 
-app.use(errorHandler);
-app.use(notFound);
-
-// don´t start server when in test mode
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => startup(`Server is running on port ${PORT}`));
 
